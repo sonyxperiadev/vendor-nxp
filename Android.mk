@@ -15,7 +15,7 @@
 LOCAL_PATH := $(call my-dir)
 
 
-ifeq ($(NXP_CHIP_TYPE), PN547C2)
+ifeq ($(NXP_CHIP_FW_TYPE), PN547C2)
 ifneq ($(TARGET_ARCH), arm64)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libpn547_fw
@@ -41,7 +41,7 @@ include $(BUILD_PREBUILT)
 endif
 endif
 
-ifeq ($(NXP_CHIP_TYPE), PN548C2)
+ifeq ($(NXP_CHIP_FW_TYPE), PN548C2)
 ifneq ($(TARGET_ARCH), arm64)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libpn548_fw
@@ -67,7 +67,7 @@ include $(BUILD_PREBUILT)
 endif
 endif
 
-ifeq ($(NXP_CHIP_TYPE), PN551)
+ifeq ($(NXP_CHIP_FW_TYPE), PN551)
 ifneq ($(TARGET_ARCH), arm64)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libpn551_fw
@@ -93,7 +93,7 @@ include $(BUILD_PREBUILT)
 endif
 endif
 
-ifeq ($(NXP_CHIP_TYPE), PN553)
+ifeq ($(NXP_CHIP_FW_TYPE), PN553)
 ifneq ($(TARGET_ARCH), arm64)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libpn553_fw
