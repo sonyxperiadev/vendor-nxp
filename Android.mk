@@ -150,3 +150,38 @@ endif
 include $(BUILD_PREBUILT)
 endif
 endif
+
+ifeq ($(NXP_CHIP_FW_TYPE), PN557)
+ifneq ($(TARGET_ARCH), arm64)
+include $(CLEAR_VARS)
+LOCAL_MODULE := libpn553_fw
+LOCAL_MODULE_OWNER := Open Source
+LOCAL_SRC_FILES := NXPNFCC_FW/pn557/32-bit/libpn557_fw.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_STEM := libpn553_fw
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := ETC
+ifeq ($(call math_gt_or_eq, $(PLATFORM_SDK_VERSION), 28), true)
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib
+else
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/firmware
+endif
+include $(BUILD_PREBUILT)
+else
+include $(CLEAR_VARS)
+LOCAL_MODULE := libpn553_fw
+LOCAL_MODULE_OWNER := Open Source
+LOCAL_SRC_FILES := NXPNFCC_FW/pn557/64-bit/libpn557_fw.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_STEM := libpn553_fw
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := ETC
+ifeq ($(call math_gt_or_eq, $(PLATFORM_SDK_VERSION), 28), true)
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib
+else
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/firmware
+endif
+include $(BUILD_PREBUILT)
+endif
+endif
+
