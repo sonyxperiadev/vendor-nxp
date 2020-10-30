@@ -12,8 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_PACKAGES += \
-	libpn547_fw \
-	libpn548_fw \
-	libpn551_fw \
-	libpn553_fw
+ifeq ($(NXP_CHIP_FW_TYPE), PN547C2)
+PRODUCT_PACKAGES += libpn547_fw
+endif
+
+ifeq ($(NXP_CHIP_FW_TYPE), PN548C2)
+PRODUCT_PACKAGES += libpn548_fw
+endif
+
+ifeq ($(NXP_CHIP_FW_TYPE), PN551)
+PRODUCT_PACKAGES += libpn551_fw
+endif
+
+ifeq ($(NXP_CHIP_FW_TYPE), PN553)
+PRODUCT_PACKAGES += libpn553_fw
+endif
+
+ifeq ($(NXP_CHIP_FW_TYPE), PN557)
+PRODUCT_PACKAGES += libpn557_fw
+endif

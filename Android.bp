@@ -1,0 +1,79 @@
+cc_prebuilt_library_shared {
+    name: "libpn547_fw",
+    vendor: true,
+    target: {
+        android_arm: {
+            srcs: ["NXPNFCC_FW/pn547c2/32-Bit/libpn547_fw.so"],
+        },
+        android_arm64: {
+            srcs: ["NXPNFCC_FW/pn547c2/64-Bit/libpn547_fw.so"],
+        },
+    },
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libpn548_fw",
+    vendor: true,
+    target: {
+        android_arm: {
+            srcs: ["NXPNFCC_FW/pn548ad/32-bit/libpn548ad_fw.so"],
+        },
+        android_arm64: {
+            srcs: ["NXPNFCC_FW/pn548ad/64-bit/libpn548ad_fw.so"],
+        },
+    },
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libpn551_fw",
+    vendor: true,
+    target: {
+        android_arm: {
+            srcs: ["NXPNFCC_FW/pn551/32-bit/libpn551_fw.so"],
+        },
+        android_arm64: {
+            srcs: ["NXPNFCC_FW/pn551/64-bit/libpn551_fw.so"],
+        },
+    },
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libpn553_fw",
+    vendor: true,
+    target: {
+        android_arm: {
+            srcs: ["NXPNFCC_FW/pn553/32-bit/libpn553_fw.so"],
+        },
+        android_arm64: {
+            srcs: ["NXPNFCC_FW/pn553/64-bit/libpn553_fw.so"],
+        },
+    },
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libpn557_fw",
+    vendor: true,
+    target: {
+        android_arm: {
+            srcs: ["NXPNFCC_FW/pn557/32-bit/libpn557_fw.so"],
+        },
+        android_arm64: {
+            srcs: ["NXPNFCC_FW/pn557/64-bit/libpn557_fw.so"],
+        },
+    },
+    strip: {
+        none: true,
+    },
+}
