@@ -16,4 +16,5 @@ PRODUCT_PACKAGES += \
 	libpn547_fw \
 	libpn548_fw \
 	libpn551_fw \
-	libpn553_fw
+	libpn553_fw \
+	libsn100u_fw
