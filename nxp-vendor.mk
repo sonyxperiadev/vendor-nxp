@@ -31,3 +31,15 @@ endif
 ifeq ($(NXP_CHIP_FW_TYPE), PN557)
 PRODUCT_PACKAGES += libpn557_fw
 endif
+
+ifeq ($(NXP_CHIP_FW_TYPE), SN1xx)
+PRODUCT_PACKAGES += libsn100u_fw
+endif
+
+ifeq ($(NXP_CHIP_FW_TYPE), SN220)
+PRODUCT_PACKAGES += libsn220u_fw
+endif
+
+ifeq ($(NXP_CHIP_FW_TYPE), SN300)
+PRODUCT_PACKAGES += sn300t_fw
+endif

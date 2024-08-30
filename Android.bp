@@ -77,3 +77,51 @@ cc_prebuilt_library_shared {
         none: true,
     },
 }
+
+cc_prebuilt_library_shared {
+    name: "libsn100u_fw",
+    vendor: true,
+    target: {
+        android_arm: {
+            srcs: ["NXPNFCC_FW/sn1xx/32-bit/libsn100u_fw.so"],
+        },
+        android_arm64: {
+            srcs: ["NXPNFCC_FW/sn1xx/64-bit/libsn100u_fw.so"],
+        },
+    },
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libsn220u_fw",
+    vendor: true,
+    target: {
+        android_arm: {
+            srcs: ["NXPNFCC_FW/sn220/32-bit/libsn220u_fw.so"],
+        },
+        android_arm64: {
+            srcs: ["NXPNFCC_FW/sn220/64-bit/libsn220u_fw.so"],
+        },
+    },
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "sn300t_fw",
+    vendor: true,
+    target: {
+        android_arm: {
+            srcs: ["NXPNFCC_FW/sn300/32-bit/sn300t_fw.so"],
+        },
+        android_arm64: {
+            srcs: ["NXPNFCC_FW/sn300/64-bit/sn300t_fw.so"],
+        },
+    },
+    strip: {
+        none: true,
+    },
+}
